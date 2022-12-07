@@ -1,0 +1,74 @@
+@import "~@/assets/styles/animations.scss";
+
+@mixin transition($transition) {
+    transition: $transition;
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+}
+@mixin box-shadow($box-shadow, $box-shadow2: '') {
+    box-shadow: $box-shadow, $box-shadow2;
+    -webkit-box-shadow: $box-shadow, $box-shadow2;
+    -moz-box-shadow: $box-shadow, $box-shadow2;
+    -o-box-shadow: $box-shadow, $box-shadow2;
+}
+@mixin animation($animation) {
+    animation: $animation;
+    -webkit-animation: $animation;
+    -moz-animation: $animation;
+    -o-animation: $animation;
+}
+@mixin animation-fill($animation) {
+    animation-fill-mode: $animation;
+    -webkit-animation-fill-mode: $animation;
+    -moz-animation-fill-mode: $animation;
+    -o-animation-fill-mode: $animation;
+}
+@mixin transform($transform) {
+    transform: $transform;
+    -webkit-transform: $transform; 
+    -moz-transform: $transform; 
+    -o-transform: $transform;
+}
+@mixin backface-visibility($visibility) {
+    backface-visibility: $visibility;
+    -webkit-backface-visibility: $visibility;
+    -moz-backface-visibility: $visibility;
+    -o-backface-visibility: $visibility;
+}
+@mixin progress($barColor, $valueColor) {
+    /* For Chrome or Safari */
+    progress {
+        height: 10px;
+        border-radius: 10px;
+    }
+    progress::-webkit-progress-bar {
+        background-color: $barColor;
+        border-radius: 10px;
+    }
+    progress::-webkit-progress-value {
+        background-color: $valueColor !important;
+        border-radius: 10px;
+    }
+
+
+    /* For Firefox */
+    progress {
+        background-color: $barColor;
+        border-radius: 10px;
+    }
+    progress::-moz-progress-bar {
+        background-color: $valueColor !important;
+        border-radius: 10px;
+    }
+
+    /* For IE10 */
+    progress {
+        background-color: $barColor;
+        border-radius: 10px;
+    }
+    progress {
+        background-color: $valueColor;
+        border-radius: 10px;
+    }
+}

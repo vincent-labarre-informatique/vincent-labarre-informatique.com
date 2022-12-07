@@ -1,0 +1,115 @@
+@import "~@/assets/styles/constantes.scss";
+
+section {
+  position: relative;
+  width: 100%;
+  scroll-margin-top: $main-menu-height;
+  padding: 5rem 0 5rem 0;
+
+  .section-titles {
+    h2 {
+      font-size: 2.2em;
+      text-align: center;
+    }
+
+    p {
+      font-style: italic;
+      font-size: 1.5em;
+      text-align: center;
+
+      &::after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 6rem;
+        margin: 1.5rem auto;
+      }
+    }
+  }
+
+  .section-body {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .informations {
+      background-color: $fivth-color;
+      @include box-shadow(5px 5px 10px 0px rgba(0, 0, 0, 0.1), 5px 5px 10px 0 rgba(0, 0, 0, 0.1));
+      position: relative;
+
+      a {
+        padding: 16px 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+
+        p {
+          text-align: center;
+          font-size: 1.3em;
+          font-style: italic;
+          padding: 0 2rem;
+          color: $text-color !important;
+        }
+      }
+    }
+  }
+
+  .section-footer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &.white-section {
+    background-color: $second-color;
+
+    * {
+      color: $base-color !important;
+    }
+
+    p {
+      color: $second-text-color !important;
+
+      &::after {
+        background: $second-text-color;
+      }
+    }
+  }
+
+  &.black-section {
+    background-color: $base-color;
+
+    * {
+      color: $second-color !important;
+    }
+
+    p {
+      color: $subtext-color !important;
+
+      &::after {
+        background: $subtext-color;
+      }
+    }
+  }
+
+  &.color-section {
+    background-color: $fourth-color;
+
+    * {
+      color: $base-color !important;
+    }
+
+    p {
+      color: $second-text-color !important;
+
+      &::after {
+        background: $second-text-color;
+      }
+    }
+  }
+}
