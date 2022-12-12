@@ -52,7 +52,7 @@
           align-items: center;
           justify-content: center;
 
-          @include progress($second-color, $fivth-color);
+          @include progress($fourth-color, $fivth-color);
         }
 
         .card-title {

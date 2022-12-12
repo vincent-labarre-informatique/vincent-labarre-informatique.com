@@ -43,3 +43,68 @@ h6 {
   @include animation(fadeInUp 2s ease .5s);
   @include animation-fill(both);
 }
+
+.cta {
+  position: relative;
+  width: 200px;
+  height: 75px;
+  border-radius: 10rem;
+  background-color: $third-color;
+  border: 4px solid $third-color;
+  text-decoration: none;
+  padding: 0 !important;
+
+  button {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: unset;
+    border: none;
+    font-size: 1.2em;
+    text-align: center;
+    color: $text-color !important;
+
+    .down-arrow {
+      display: none;
+      position: absolute;
+      top: 5rem;
+      left: calc(50% - 10px);
+      width: 16px;
+      height: 16px;
+      border-bottom: 4px solid;
+      border-right: 4px solid;
+      border-radius: 4px;
+      transform: rotateZ(45deg);
+      animation: jumpInfinite 1.5s infinite;
+    }
+  }
+
+  &:hover {
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+
+    button {
+      color: $third-color !important;
+      cursor: pointer;
+
+      .down-arrow {
+        display: block;
+        color: $third-color !important;
+      }
+    }
+  }
+
+  &:active {
+    button {
+      color: $text-color !important;
+    }
+  }
+
+  &:visited {
+    button {
+      color: $text-color !important;
+    }
+  }
+}

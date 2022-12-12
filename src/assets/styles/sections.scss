@@ -4,7 +4,7 @@ section {
   position: relative;
   width: 100%;
   scroll-margin-top: $main-menu-height;
-  padding: 5rem 0 5rem 0;
+  padding: 5rem 0;
 
   .section-titles {
     h2 {
@@ -35,7 +35,7 @@ section {
     justify-content: center;
 
     .informations {
-      background-color: $fivth-color;
+      background-color: $third-color;
       @include box-shadow(5px 5px 10px 0px rgba(0, 0, 0, 0.1), 5px 5px 10px 0 rgba(0, 0, 0, 0.1));
       position: relative;
 

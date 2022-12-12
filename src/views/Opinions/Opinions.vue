@@ -1,10 +1,23 @@
 <template>
-  <section ref="anchor" id="opinions" class="black-section" v-if="showAvis">
+  <section ref="anchor" id="opinions" class="color-section">
     <div class="section-titles">
       <h2>Avis clients</h2>
       <p>Ils m'ont fait confiance.</p>
     </div>
     <div class="section-body">
+      <div id="opinions-list">
+        <div class="opinion-card">
+          <img src="@/assets/images/main-page.jpg" alt="Arnaud Frumy Photo">
+          <p>
+            Vincent est à l'écoute, compétant et passionné.<br />
+            Nous avons fait appel à lui à plusieurs reprises, pour des projets ambitieux de logiciels internes, et il as toujours su trouver les solutions pour nos demandes.
+          </p>
+          <p class="opinion-author">
+            Arnaud Frumy<br />
+            MYSTERE EXPRESS
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -13,11 +26,6 @@
 
 export default {
   name: 'Opinions',
-  data() {
-    return {
-      showAvis: false
-    };
-  },
   methods: {
     show(isVisible, entry) {
       if (isVisible) {

@@ -4,7 +4,7 @@
       <Header ref="header" />
       <Home />
       <Services ref="services" />
-      <Competencies ref="competencies" />
+      <Competencies ref="competencies" v-if="false" />
       <Rates ref="rates" />
       <Opinions ref="opinions" />
       <Contact ref="contact" />

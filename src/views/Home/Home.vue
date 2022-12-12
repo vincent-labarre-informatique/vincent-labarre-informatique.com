@@ -1,9 +1,15 @@
 <template>
     <div id="home">
       <div id="title">
-        <h1>Vincent Labarre Informatique</h1>
-        <p><svg-icon :fa-icon="faQuoteLeft" :size=20></svg-icon> La solution pour d&eacute;velopper vos id&eacute;es. <svg-icon :fa-icon="faQuoteRight" :size=20></svg-icon></p>
+        <p class="title">Boostez votre productivité dès maintenant</p>
+        <p>1 seul interlocuteur pour tous vos projets web</p>
       </div>
+      <a href="#contact" class="cta">
+        <button>
+          Contacter moi
+          <div class="down-arrow"></div>
+        </button>
+      </a>
     </div>
   </template>
   

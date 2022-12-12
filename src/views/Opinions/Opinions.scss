@@ -1,1 +1,64 @@
 @import "~@/assets/styles/sections.scss";
+
+#opinions-list {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 3rem;
+
+  .opinion-card {
+    position: relative;
+    width: 35%;
+    background: $third-color;
+    padding: 2rem;
+    margin-top: 5rem;
+    @include box-shadow(5px 5px 10px 0px rgba(0, 0, 0, 0.1), 5px 5px 10px 0 rgba(0, 0, 0, 0.1));
+
+    &:first-child, &:nth-child(2) {
+      margin-top: 1rem;
+    }
+
+    img {
+      position: absolute;
+      top: -60px;
+      left: -70px;
+      width: 120px;
+      height: 120px;
+      border-radius: 100%;
+    }
+
+    p {
+      margin-top: 1rem;
+      color: $text-color !important;
+    }
+
+    .opinion-author {
+      text-align: right;
+      font-weight: bold;
+    }
+  }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 1024px) {
+  #opinions-list {
+    .opinion-card {
+      position: relative;
+      width: calc(95% - 130px);
+      margin-top: 4rem;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      img {
+        top: -40px;
+        left: -40px;
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+}

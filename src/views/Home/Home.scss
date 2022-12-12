@@ -10,38 +10,41 @@
   justify-content: center;
   background: url("~@/assets/images/main-page.jpg");
   background-size: cover;
+  background-attachment: fixed;
 
   #title {
     text-align: center;
     overflow: hidden;
-    white-space: nowrap;
+    white-space: normal;
+    width: 100%;
 
-    h1 {
-      @include animation(typing 2s steps(40, end));
+    p {
+      @include animation(fadeInLeft 2s steps(40, end));
       overflow: hidden;
       white-space: nowrap;
       color: #fff;
-      font-size: 4em;
-    }
+      font-size: 2em;
+      padding: 0 1rem;
 
-    p {
-      @include animation(fadeIn 3s ease-out);
-      font-style: italic;
-      font-size: 1.5em;
-      margin-top: 1rem;
-      color: #fff;
+      &.title {
+        font-weight: bold;
+        font-size: 3em;
+        margin-bottom: 2rem;
+      }
     }
+  }
+
+  .cta {
+    position: absolute;
+    bottom: 3rem;
   }
 }
 
 @media only screen and (min-width: 200px) and (max-width: 1024px) {
   #home {
     #title {
-      h1 {
-        font-size: 1.2em;
-      }
       p {
-        font-size: 1em;
+        white-space: normal;
       }
     }
   }

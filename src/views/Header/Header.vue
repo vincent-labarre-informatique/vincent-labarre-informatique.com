@@ -10,10 +10,9 @@
       <svg-icon :fa-icon="faXmark" @click="togglePhoneMenu" v-if="phoneMenuVisible"></svg-icon>
     </div>
     <ul :class="[ phoneMenuVisible ? 'visible' : 'hide' ]">
-      <router-link @click="togglePhoneMenu" to="#services" :class="{ 'active':  windowTop >= refsPosition['services'] && windowTop < refsPosition['competencies'] }"><li>Services</li></router-link>
-      <router-link @click="togglePhoneMenu" to="#competencies" :class="{ 'active':  windowTop >= refsPosition['competencies'] && windowTop < refsPosition['rates'] }"><li>Comp&eacute;tences</li></router-link>
-      <router-link @click="togglePhoneMenu" to="#rates" :class="{ 'active':  windowTop >= refsPosition['rates'] && windowTop < refsPosition['contact'] }"><li>Tarifs</li></router-link>
-      <!--<router-link @click="togglePhoneMenu" to="#opinions" :class="{ 'active':  windowTop >= refsPosition['opinions'] && windowTop < refsPosition['contact'] }"><li>Avis</li></router-link>-->
+      <router-link @click="togglePhoneMenu" to="#services" :class="{ 'active':  windowTop >= refsPosition['services'] && windowTop < refsPosition['rates'] }"><li>Services</li></router-link>
+      <router-link @click="togglePhoneMenu" to="#rates" :class="{ 'active':  windowTop >= refsPosition['rates'] && windowTop < refsPosition['opinions'] }"><li>Tarifs</li></router-link>
+      <router-link @click="togglePhoneMenu" to="#opinions" :class="{ 'active':  windowTop >= refsPosition['opinions'] && windowTop < refsPosition['contact'] }"><li>Avis</li></router-link>
       <router-link @click="togglePhoneMenu" to="#contact" :class="{ 'active':  windowTop >= refsPosition['contact'] }"><li>Contact</li></router-link>
     </ul>
   </nav>
@@ -42,9 +41,8 @@ export default {
     let self = this;
     let mainHeader = this.$refs['main-header'].clientHeight;
     this.refsPosition['services'] = this.$parent.$refs['services'].$refs['anchor'].getBoundingClientRect().y - mainHeader;
-    this.refsPosition['competencies'] = this.$parent.$refs['competencies'].$refs['anchor'].getBoundingClientRect().y - mainHeader;
     this.refsPosition['rates'] = this.$parent.$refs['rates'].$refs['anchor'].getBoundingClientRect().y - mainHeader;
-    // this.refsPosition['opinions'] = this.$parent.$refs['opinions'].$refs['anchor'].getBoundingClientRect().y - mainHeader;
+    this.refsPosition['opinions'] = this.$parent.$refs['opinions'].$refs['anchor'].getBoundingClientRect().y - mainHeader;
     this.refsPosition['contact'] = this.$parent.$refs['contact'].$refs['anchor'].getBoundingClientRect().y - mainHeader;
 
     window.addEventListener("scroll", function(){
