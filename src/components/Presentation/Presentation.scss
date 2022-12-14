@@ -1,0 +1,97 @@
+@import "~@/assets/styles/constantes.scss";
+@import "~@/assets/styles/mixins.scss";
+@import "~@/assets/styles/sections.scss";
+
+#presentation {
+  padding: 0;
+  height: 85vh;
+
+  .section-titles {
+    padding-top: 12rem;
+  }
+
+  .section-body {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+
+    img {
+      position: absolute;
+      right: 350px;
+    }
+
+    #presentation-text {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h3 {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-align: center;
+        padding-right: .5rem;
+        @include animation(typing 3s steps(100, end));
+
+        &:after {
+          content: '';
+          display: block;
+          background-color: $second-color;
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: calc(100% - 1px);
+          bottom: 0;
+          @include animation(blink-caret .75s step-end infinite);
+        }
+      }
+      p {
+        width: 40%;
+        color: $text-color !important;
+        margin: 2rem 18rem 0 0;
+        text-align: justify;
+
+        a {
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+            color: $link-color !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 1024px) {
+  #presentation {
+    height: unset;
+
+    .section-body {  
+      img {
+        display: none;
+      }
+
+      #presentation-text {
+        h3 {
+          white-space: normal;
+          @include animation(none);
+
+          &:after {
+            display: none;
+          }
+        }
+
+        p {
+          margin: 0;
+          width: 100%;
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}
