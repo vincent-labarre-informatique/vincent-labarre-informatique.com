@@ -1,4 +1,5 @@
 @import "~@/assets/styles/mixins.scss";
+@import "~@/assets/styles/constantes.scss";
 
 #home {
   position: relative;
@@ -17,6 +18,15 @@
     overflow: hidden;
     white-space: normal;
     width: 100%;
+
+    h1 {
+      font-size: 3em;
+    }
+
+    .citation {
+      margin-bottom: 4rem;
+      @include animation(unset);
+    }
 
     p {
       @include animation(fadeInLeft 2s steps(40, end));
@@ -37,14 +47,24 @@
   .cta {
     position: absolute;
     bottom: 3rem;
+
+    &:hover {
+      button {
+        color: $third-color !important;
+      }
+    }
   }
 }
 
 @media only screen and (min-width: 200px) and (max-width: 1024px) {
   #home {
     #title {
+      h1 {
+        font-size: 2em !important;
+      }
       p {
         white-space: normal;
+        font-size: 1.5em !important;
       }
     }
   }

@@ -20,7 +20,8 @@
     "vue-meta": "^3.0.0-alpha.7",
     "vue-observe-visibility": "^2.0.0-alpha.1",
     "vue-router": "^4.1.6",
-    "vue3-icon": "^2.1.0"
+    "vue3-icon": "^2.1.0",
+    "vuex": "^4.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.9",

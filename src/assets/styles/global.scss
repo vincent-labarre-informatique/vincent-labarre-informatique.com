@@ -108,3 +108,34 @@ h6 {
     }
   }
 }
+
+.back-button {
+  position: absolute;
+  top: 10rem;
+  left: 2rem;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $third-color !important;
+  background-color: unset;
+  border: unset;
+  cursor: pointer;
+  padding: .5rem;
+
+  .vue3-icon {
+    widows: 16px;
+    height: 16px;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 1024px) {
+  .back-button {
+    top: 9rem;
+    left: .5rem;
+  }
+}

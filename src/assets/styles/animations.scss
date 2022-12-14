@@ -87,6 +87,7 @@
     opacity: 1
   }
 }
+
 @-webkit-keyframes fadeInLeft {
   from {
     display: none;
@@ -141,4 +142,14 @@
   100% {
     margin-top: 0;
   }
+}
+
+@-webkit-keyframes blink-caret {
+  from, to { background-color: transparent }
+  50% { background-color: #fff }
+}
+
+@keyframes blink-caret {
+  from, to { background-color: transparent }
+  50% { background-color: #fff }
 }
